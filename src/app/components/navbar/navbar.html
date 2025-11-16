@@ -1,0 +1,25 @@
+<!-- Navbar principal como flex -->
+<div class="d-flex align-items-center bg-dark-subtle px-3">
+  
+  <!-- Links -->
+  <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" [ngClass]="{ 'active': active === 'home' }" (click)="setActive('home')">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [ngClass]="{ 'active': active === 'l1' }" (click)="setActive('l1')">Content</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [ngClass]="{ 'active': active === 'l2' }" (click)="setActive('l2')">Checklist</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" aria-disabled="true">Study AI</a>
+    </li>
+  </ul>
+
+  <!-- Avatar -->
+  <div class="ms-auto">
+    <app-perfil></app-perfil>
+  </div>
+
+</div>

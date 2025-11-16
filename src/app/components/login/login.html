@@ -1,0 +1,36 @@
+<div class="container h-100 d-flex justify-content-center align-items-center">
+      <div class="card shadow-lg p-4" style="max-width: 400px; width: 100%;">
+        <div class="text-center mb-4">
+          <img src="https://tecdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
+               class="w-50 mb-3" alt="logo" />
+          <h4>Ziros AI</h4>
+        </div>
+
+        <form (ngSubmit)="onSubmit()">
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="text" class="form-control" [(ngModel)]="loginData.email" name="email" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-control" [(ngModel)]="loginData.password" name="password" required>
+          </div>
+
+          <div *ngIf="mensagemErro" class="text-danger mb-3">{{ mensagemErro }}</div>
+
+          <button class="btn btn-primary w-100 mb-3" [disabled]="loading">
+            {{ loading ? 'Loading...' : 'Log in' }}
+          </button>
+
+          <div class="text-center">
+            <a href="#!">Forgot password?</a>
+          </div>
+        </form>
+
+        <div class="text-center mt-3">
+          <span>Don't have an account?</span>
+          <button class="btn btn-outline-danger btn-sm ms-2" (click)="goToRegister()">Register</button>
+        </div>
+      </div>
+    </div>
